@@ -6,6 +6,15 @@ class HelloWorld
   def hello
     puts "Hello, World. I am #{@name}."
   end
+
+  def name
+    @name
+  end
+
+  def name = (value)
+    @name = value
+  end
+  
 end
 
 bob = HelloWorld.new("BoB")

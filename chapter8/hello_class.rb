@@ -1,4 +1,6 @@
 class HelloWorld
+attr_accessor :name
+
   def initialize(myname = "Ruby")
     @name = myname
   end
@@ -11,10 +13,14 @@ class HelloWorld
     @name
   end
 
-  def name = (value)
+  def name=(value)
     @name = value
   end
-  
+
+  def greet
+    puts "Hi, I am #{self.name}"
+  end
+
 end
 
 bob = HelloWorld.new("BoB")

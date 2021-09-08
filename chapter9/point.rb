@@ -17,8 +17,27 @@ class Point
     self.class.new(x - other.x, y - other.y)
   end
 
+  def +@
+    dup
+  end
+
+  def -@
+    self.class.new(-x, -y)
+  end
+
+  def ~@
+    self.class.new(-y, x)
+  end
+
+end
+
+
   point0 = Point.new(3, 6)
   point1 = Point.new(1, 8)
 
   p point0 + point1
   p point0 - point1
+  p +point
+  p -point
+  p ~point
+  
